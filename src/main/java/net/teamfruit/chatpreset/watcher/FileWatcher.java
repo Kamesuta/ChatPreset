@@ -38,7 +38,7 @@ public class FileWatcher implements Runnable {
                 WatchKey watchKey = watcher.take();
                 for (WatchEvent<?> event : watchKey.pollEvents()) {
                     Path modified = (Path) event.context();
-                    callbacks.get(modified.normalize()).forEach(Runnable::run);
+                    callbacks.get(modified.toAbsolutePath().normalize()).forEach(Runnable::run);
                 }
                 watchKey.reset();
             }
@@ -60,6 +60,6 @@ public class FileWatcher implements Runnable {
     }
 
     public void register(File file, Runnable callback) {
-        register(file.getParentFile().toPath().normalize(), file.toPath().normalize(), callback);
+        register(file.getParentFile().toPath().toAbsolutePath().normalize(), file.toPath().toAbsolutePath().normalize(), callback);
     }
 }

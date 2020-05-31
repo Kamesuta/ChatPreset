@@ -19,7 +19,7 @@ public class PresetFile {
         ChatPreset.LOGGER.info("Reload file " + this.location.getAbsolutePath());
     }
 
-    private void onChange() {
+    public void onChange() {
         this.line = peek();
     }
 

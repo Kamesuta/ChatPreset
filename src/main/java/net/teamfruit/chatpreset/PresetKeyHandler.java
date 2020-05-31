@@ -15,7 +15,9 @@ public class PresetKeyHandler {
     @SubscribeEvent
     public static void onKeyInput(InputEvent.KeyInputEvent event) {
         if (mc.currentScreen == null) {
-            if (KeyBindingList.keyEdit.isPressed()) {
+            if (ChatPreset.presetFile.getPeek() == null) {
+                ChatPreset.presetFile.onChange();
+            } else if (KeyBindingList.keyEdit.isPressed()) {
                 ChatPreset.presetFile.openEditor();
                 ChatScreen chatScreen = new ChatScreen("");
                 mc.displayGuiScreen(chatScreen);
@@ -27,8 +29,8 @@ public class PresetKeyHandler {
     }
 
     @SubscribeEvent
-    public static void onRender(RenderGameOverlayEvent.Post event) {
-        if (!(mc.currentScreen instanceof ChatScreen)) {
+    public static void onRender(RenderGameOverlayEvent.Text event) {
+        if (!(mc.currentScreen instanceof ChatScreen) && mc.world != null) {
             mc.fontRenderer.drawStringWithShadow(
                     ChatPreset.presetFile.getPeek(),
                     4,
