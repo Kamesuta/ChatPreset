@@ -1,0 +1,5 @@
+{
+  "key.chatpreset.next": "次のプリセットを入力",
+  "key.chatpreset.edit": "テキストエディターを開く",
+  "chatpreset.template": "ChatPresetの説明\nこうやって一行に一セリフずつ書きます。\nセリフ1\nセリフ2\n上から順番に発言します。\nShift+Enterでテキストエディターを開きます\n※注意 発言したセリフは消えます。コピーをとってね！"
+}
