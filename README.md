@@ -34,8 +34,8 @@ Downloads can be found on [CurseForge](http://www.curseforge.com/minecraft/mc-mo
 
 ## Usage
 
-`Shift+Enter` to open text editor
-`Enter` to type preset
+`Shift+Enter` to open text editor  
+`Enter` to type preset  
 
 ### Encoding
 
