@@ -1,0 +1,3 @@
+key.chatpreset.next=Type Next Preset
+key.chatpreset.edit=Open Text Editor
+chatpreset.template=How to use ChatPreset\nIn this way, write one line per line.\nLine 1\nLine 2\nSpeak in order from the top.\nOpen text editor with Shift + Enter\n* Caution The speech will be erased. Make a copy!
