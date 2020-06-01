@@ -18,6 +18,7 @@ public class PresetKeyHandler {
             if (ChatPreset.presetFile.getPeek() == null) {
                 ChatPreset.presetFile.onChange();
             } else if (KeyBindingList.keyEdit.isPressed()) {
+                ChatPreset.presetFile.init();
                 ChatPreset.presetFile.openEditor();
                 GuiChat chatScreen = new GuiChat("");
                 mc.displayGuiScreen(chatScreen);

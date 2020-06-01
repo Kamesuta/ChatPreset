@@ -26,7 +26,7 @@ public class PresetFile {
     public void openEditor() {
         try {
             Desktop.getDesktop().edit(this.location);
-        } catch (IOException e) {
+        } catch (Exception e) {
             ChatPreset.LOGGER.error("Could not open " + this.location.getAbsolutePath(), e);
         }
     }
