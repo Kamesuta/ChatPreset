@@ -33,6 +33,7 @@ public class PresetKeyHandler {
     public static void onRender(RenderGameOverlayEvent.Text event) {
         if (!(mc.currentScreen instanceof ChatScreen) && mc.world != null) {
             mc.fontRenderer.drawStringWithShadow(
+                    event.getMatrixStack(),
                     ChatPreset.presetFile.getPeek(),
                     4,
                     event.getWindow().getScaledHeight() - mc.fontRenderer.FONT_HEIGHT - 3,
